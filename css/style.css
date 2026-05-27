@@ -1,0 +1,122 @@
+/* =============================
+CONFIGURAÇÕES GERAIS E FONTES 
+============================= */
+
+@font-face {
+  font-family: "Young Serif";
+  src: url("../assets/fonts/young-serif/YoungSerif-Regular.ttf")
+    format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Outfit";
+  src: url("../assets/fonts/outfit/Outfit-VariableFont_wght.ttf")
+    format("truetype");
+  font-weight: 400 700;
+  font-style: normal;
+}
+
+:root {
+  --color-white: #ffffff;
+  --color-stone-100: #f3e6d8;
+  --color-stone-150: #e4ded8;
+  --color-stone-600: #5f574e;
+  --color-stone-900: #302d2c;
+
+  --color-brown-800: #854632;
+  --color-rose-50: #fff5fa;
+  --color-rose-800: #7b284f;
+
+  --font-family-title: "Young Serif", serif;
+  --font-family-body: "Outfit", sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* =============================
+ESTRUTURA E CORPO (LAYOUT BASE)
+============================= */
+
+body {
+  font-family: var(--font-family-body);
+  font-size: 18px;
+  background-color: var(--color-stone-100); /* fundo do desktop */
+  color: var(--color-stone-600);
+}
+
+.recipe-card {
+  background-color: var(--color-white);
+  width: 100%;
+}
+
+/* =============================
+HEADER (TÍTULO E INTRODUÇÃO)
+============================= */
+
+header img {
+  width: 100%;
+  height: auto;
+  display: block;
+  margin-bottom: 40px;
+}
+
+header h1,
+header p {
+  margin: 0 32px 24px;
+}
+
+header h1 {
+  font-family: var(--font-family-title);
+  font-weight: 400;
+  font-size: 38px;
+  color: var(--color-stone-900);
+  line-height: 1.2;
+}
+
+header p {
+  line-height: 1.5;
+}
+
+/* =============================
+SEÇÃO: PREPARATION TIME
+============================= */
+
+.prep-time-box {
+  background-color: var(--color-rose-50);
+  border-radius: 12px;
+  padding: 24px;
+  margin: 32px;
+}
+
+.prep-time-box h2 {
+  font-family: var(--font-family-body);
+  color: var(--color-rose-800);
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 16px;
+}
+
+.prep-time-box ul {
+  padding-left: 22px;
+}
+
+.prep-time-box li {
+  margin-bottom: 12px;
+  padding-left: 12px;
+}
+
+.prep-time-box li::marker {
+  color: var(--color-rose-800);
+  font-size: 12px;
+}
+
+/* remove a margem do último item para não sobrar espaço */
+.prep-time-box li:last-child {
+  margin-bottom: 0;
+}
