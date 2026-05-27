@@ -32,23 +32,23 @@ CONFIGURAÇÕES GERAIS E FONTES
   --font-family-title: "Young Serif", serif;
   --font-family-body: "Outfit", sans-serif;
 
-  --font-size-xl: 40px; /* Text Preset 1 (Títulos Principais) */
-  --font-size-lg: 28px; /* Text Preset 2 (Títulos de Seções) */
-  --font-size-md: 20px; /* Text Preset 3 (Subtítulos / Caixas de Destaque) */
-  --font-size-base: 16px; /* Text Preset 4 (Texto Corrido / Body) */
+  --font-size-xl: 2.5rem; /* Text Preset 1 (Títulos Principais) */
+  --font-size-lg: 1.75rem; /* Text Preset 2 (Títulos de Seções) */
+  --font-size-md: 1.25rem; /* Text Preset 3 (Subtítulos / Caixas de Destaque) */
+  --font-size-base: 1rem; /* Text Preset 4 (Texto Corrido / Body) */
 
   --font-weight-regular: 400;
   --font-weight-semibold: 600;
   --font-weight-bold: 700;
 
-  --spacing-1600: 128px;
-  --spacing-600: 48px;
-  --spacing-500: 40px;
-  --spacing-400: 32px;
-  --spacing-300: 24px;
-  --spacing-200: 16px;
-  --spacing-150: 12px;
-  --spacing-100: 8px;
+  --spacing-1600: 8rem;
+  --spacing-600: 3rem;
+  --spacing-500: 2.5rem;
+  --spacing-400: 2rem;
+  --spacing-300: 1.5rem;
+  --spacing-200: 1rem;
+  --spacing-150: 0.75rem;
+  --spacing-100: 0.5rem;
 }
 
 * {
@@ -116,7 +116,7 @@ li {
 
 li::marker {
   color: var(--color-brown-800);
-  font-size: 12px;
+  font-size: 0.75rem;
 }
 
 /* remove a margem do último item para não sobrar espaço */
@@ -147,7 +147,7 @@ header p {
 header h1 {
   font-family: var(--font-family-title);
   font-weight: var(--font-weight-regular);
-  font-size: 36px; /* fonte-size para o mobile */
+  font-size: 2.25rem; /* fonte-size para o mobile */
   line-height: 1;
   color: var(--color-stone-900);
   margin-bottom: var(--spacing-300);
@@ -163,8 +163,8 @@ SEÇÃO: PREPARATION TIME
 
 .prep-time-box {
   background-color: var(--color-rose-50);
-  border-radius: 12px;
-  padding: 24px;
+  border-radius: 0.75rem;
+  padding: var(--spacing-300);
   margin: 0 var(--spacing-400) var(--spacing-400);
 }
 
@@ -195,4 +195,55 @@ SEÇÃO: INSTRUCTIONS
 .recipe-section li::marker {
   font-weight: var(--font-weight-bold);
   font-size: var(--font-size-base);
+}
+
+/* =============================
+SEÇÃO: NUTRITION
+============================= */
+
+.recipe-section:last-of-type {
+  margin-bottom: 0; /* remove a margem */
+}
+
+.recipe-section p {
+  margin-bottom: var(--spacing-300);
+}
+
+.nutrition-table {
+  width: 100%;
+  border-collapse: collapse; /* faz a linha divisória ser contínua */
+}
+
+.nutrition-table tr {
+  line-height: 1.5;
+  border-bottom: 1px solid var(--color-stone-150);
+}
+
+.nutrition-table tr:last-child {
+  border-bottom: none; /* remove a última linha */
+}
+
+.nutrition-table td {
+  padding: var(--spacing-150) var(--spacing-400);
+}
+
+.nutrition-table td strong {
+  font-weight: var(--font-weight-bold);
+  color: var(--color-brown-800);
+}
+
+/* =============================
+FOOTER
+============================= */
+
+.attribution {
+  font-size: 0.6875rem;
+  text-align: center;
+  padding-block: var(--spacing-400);
+  background-color: var(--color-white);
+  color: var(--color-stone-600);
+}
+
+.attribution a {
+  color: var(--color-brown-800);
 }
