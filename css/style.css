@@ -20,17 +20,35 @@ CONFIGURAÇÕES GERAIS E FONTES
 
 :root {
   --color-white: #ffffff;
-  --color-stone-100: #f3e6d8;
-  --color-stone-150: #e4ded8;
-  --color-stone-600: #5f574e;
-  --color-stone-900: #302d2c;
+  --color-stone-100: #f3e5d7;
+  --color-stone-150: #e3ddd7;
+  --color-stone-600: #5f564d;
+  --color-stone-900: #312e2c;
 
   --color-brown-800: #854632;
-  --color-rose-50: #fff5fa;
-  --color-rose-800: #7b284f;
+  --color-rose-50: #fff7fb;
+  --color-rose-800: #7a284e;
 
   --font-family-title: "Young Serif", serif;
   --font-family-body: "Outfit", sans-serif;
+
+  --font-size-xl: 40px; /* Text Preset 1 (Títulos Principais) */
+  --font-size-lg: 28px; /* Text Preset 2 (Títulos de Seções) */
+  --font-size-md: 20px; /* Text Preset 3 (Subtítulos / Caixas de Destaque) */
+  --font-size-base: 16px; /* Text Preset 4 (Texto Corrido / Body) */
+
+  --font-weight-regular: 400;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+
+  --spacing-1600: 128px;
+  --spacing-600: 48px;
+  --spacing-500: 40px;
+  --spacing-400: 32px;
+  --spacing-300: 24px;
+  --spacing-200: 16px;
+  --spacing-150: 12px;
+  --spacing-100: 8px;
 }
 
 * {
@@ -45,7 +63,7 @@ ESTRUTURA E CORPO (LAYOUT BASE)
 
 body {
   font-family: var(--font-family-body);
-  font-size: 18px;
+  font-size: var(--font-size-base);
   background-color: var(--color-stone-100); /* fundo do desktop */
   color: var(--color-stone-600);
 }
@@ -56,27 +74,83 @@ body {
 }
 
 /* =============================
+LINHA DIVISÓRIA
+============================= */
+
+hr {
+  border: none;
+  height: 1px;
+  background-color: var(--color-stone-150);
+  margin: 0 var(--spacing-400) var(--spacing-400);
+}
+
+/* =============================
+COMPONENTES (SEÇÃO E TÍTULO)
+============================= */
+
+.recipe-section {
+  margin-inline: var(--spacing-400);
+  margin-bottom: var(--spacing-400);
+}
+
+.recipe-section h2 {
+  margin-bottom: var(--spacing-300);
+}
+
+h2 {
+  font-family: var(--font-family-title);
+  font-weight: var(--font-weight-regular);
+  font-size: var(--font-size-lg);
+  line-height: 1;
+  color: var(--color-brown-800);
+}
+
+ul {
+  padding-left: var(--spacing-200);
+}
+
+li {
+  margin-bottom: var(--spacing-100);
+  padding-left: var(--spacing-200);
+}
+
+li::marker {
+  color: var(--color-brown-800);
+  font-size: 12px;
+}
+
+/* remove a margem do último item para não sobrar espaço */
+li:last-child {
+  margin-bottom: 0;
+}
+
+/* =============================
 HEADER (TÍTULO E INTRODUÇÃO)
 ============================= */
+
+header {
+  margin-bottom: var(--spacing-400);
+}
 
 header img {
   width: 100%;
   height: auto;
   display: block;
-  margin-bottom: 40px;
+  margin-bottom: var(--spacing-500);
 }
 
 header h1,
 header p {
-  margin: 0 32px 24px;
+  margin-inline: var(--spacing-400);
 }
 
 header h1 {
   font-family: var(--font-family-title);
-  font-weight: 400;
-  font-size: 38px;
+  font-weight: var(--font-weight-regular);
+  font-size: 36px; /* fonte-size para o mobile */
+  line-height: 1;
   color: var(--color-stone-900);
-  line-height: 1.2;
+  margin-bottom: var(--spacing-300);
 }
 
 header p {
@@ -91,32 +165,34 @@ SEÇÃO: PREPARATION TIME
   background-color: var(--color-rose-50);
   border-radius: 12px;
   padding: 24px;
-  margin: 32px;
+  margin: 0 var(--spacing-400) var(--spacing-400);
 }
 
 .prep-time-box h2 {
-  font-family: var(--font-family-body);
+  font-family: inherit;
+  font-weight: var(--font-weight-semibold);
+  font-size: var(--font-size-md);
   color: var(--color-rose-800);
-  font-size: 20px;
-  font-weight: 600;
-  margin-bottom: 16px;
+  margin-bottom: var(--spacing-200);
 }
 
 .prep-time-box ul {
-  padding-left: 22px;
-}
-
-.prep-time-box li {
-  margin-bottom: 12px;
-  padding-left: 12px;
+  padding-left: var(--spacing-300);
 }
 
 .prep-time-box li::marker {
   color: var(--color-rose-800);
-  font-size: 12px;
 }
 
-/* remove a margem do último item para não sobrar espaço */
-.prep-time-box li:last-child {
-  margin-bottom: 0;
+/* =============================
+SEÇÃO: INSTRUCTIONS
+============================= */
+
+.recipe-section ol {
+  padding-left: var(--spacing-200);
+}
+
+.recipe-section li::marker {
+  font-weight: var(--font-weight-bold);
+  font-size: var(--font-size-base);
 }
