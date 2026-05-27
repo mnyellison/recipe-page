@@ -247,3 +247,59 @@ FOOTER
 .attribution a {
   color: var(--color-brown-800);
 }
+
+/* =============================
+RESPONSIVIDADE PARA O TABLET
+============================= */
+
+@media screen and (min-width: 768px) {
+  /* =============================
+  ESTRUTURA E CORPO (LAYOUT BASE)
+  ============================= */
+
+  body {
+    display: grid;
+    place-items: center;
+    min-height: 100vh;
+    padding: var(--spacing-1600);
+  }
+
+  .recipe-card {
+    max-width: 736px; /* responsividade para o desktop */
+    margin: 0 auto;
+    padding: var(--spacing-500);
+    border-radius: 1.5rem;
+  }
+
+  /* =============================
+  ZERANDO MARGIN-INLINE DE ELEMENTOS
+  ============================= */
+
+  hr,
+  .prep-time-box,
+  .recipe-section,
+  header h1,
+  header p {
+    margin-inline: 0;
+  }
+
+  /* TÍTULO */
+  header h1 {
+    font-size: var(--font-size-xl);
+  }
+
+  /* ARREDONDANDO A BORDA DA IMAGEM */
+  header img {
+    border-radius: 0.75rem;
+  }
+
+  /* =============================
+  FOOTER
+  ============================= */
+
+  .attribution {
+    font-size: 0.875rem;
+    background-color: transparent;
+    padding-block: var(--spacing-150);
+  }
+}
