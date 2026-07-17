@@ -1,49 +1,48 @@
-# Frontend Mentor - Recipe page solution
+# Frontend Mentor - Solução da Página de Receita (Recipe Page)
 
-This is a solution to the Recipe page challenge on Frontend Mentor. The goal of this challenge was to build a responsive recipe card component as close as possible to the original design.
+Esta é a minha solução para o desafio "Recipe page" do Frontend Mentor. O objetivo do projeto foi construir um card de receita totalmente responsivo, chegando o mais próximo possível do design proposto.
 
-## Overview
+## Visão Geral
 
-### The challenge
+### O Desafio
 
-Users should be able to:
+Os usuários devem ser capazes de:
+- Visualizar o layout ideal para a interface dependendo do tamanho da tela do seu dispositivo (responsividade completa).
 
-- View the optimal layout for the interface depending on their device's screen size
-
-### Screenshot
+### Captura de Tela
 
 ![](./assets/images/screenshot.jpg)
 
 ### Links
 
-- Solution URL: https://github.com/mnyellison/recipe-page
-- Live Site URL: https://recipe-page-six-pearl.vercel.app/
+- **Código no GitHub:** [Visualizar Repositório](https://github.com/mnyellison/recipe-page)
+- **Site Online (Live Preview):** [Acessar Projeto](https://recipe-page-six-pearl.vercel.app/)
 
 ---
 
-## My process
+## Meu Processo
 
-### Built with
+### Tecnologias Utilizadas
 
-- Semantic HTML5
-- CSS custom properties
+- HTML5 Semântico
+- Variáveis CSS (Custom Properties)
 - CSS Grid
-- Mobile-first workflow
-- Responsive design
+- Fluxo de desenvolvimento Mobile-first
+- Design Responsivo
 
 ---
 
-### What I learned
+### O que eu aprendi neste projeto
 
-During this project, I practiced:
+Este projeto foi excelente para consolidar conceitos fundamentais de estilização e estrutura:
 
-- Creating responsive layouts using a mobile-first approach
-- Organizing CSS with custom properties (Design Tokens based on Figma Guidelines)
-- Learning that using pure numerical values (multipliers) for `line-height` allows perfect inheritance for child elements
-- Mastering advanced list customization and modifying bullet points using the `::marker` pseudo-element
-- Overcoming table styling hurdles by using `border-collapse: collapse` and applying padding directly onto `td` elements to create seamless divider lines
+1. **Desenvolvimento Mobile-First:** Pratiquei a construção do layout pensando primeiro em dispositivos móveis e depois adaptando para telas maiores.
+2. **Design Tokens com Variáveis CSS:** Organizei o CSS utilizando variáveis baseadas nos guias do Figma do projeto, o que facilita muito a manutenção do código.
+3. **Herança de Tipografia:** Aprendi que utilizar valores puramente numéricos (multiplicadores) para a propriedade `line-height` permite uma herança perfeita e segura para os elementos filhos.
+4. **Estilização de Listas:** Dominei a customização avançada de marcadores de lista utilizando o pseudo-elemento `::marker`.
+5. **Estilização de Tabelas:** Superei os desafios comuns de espaçamento em tabelas HTML combinando `border-collapse: collapse` e aplicando padding diretamente nas células (`td`) para criar linhas divisórias limpas.
 
-Example of CSS variables and table structure used in the project:
+Exemplo de variáveis CSS e estrutura de tabela que desenvolvi no projeto:
 
 ```css
 :root {
@@ -53,7 +52,7 @@ Example of CSS variables and table structure used in the project:
 }
 
 header p {
-  line-height: 1.5; /* Pure multiplier for safe inheritance */
+  line-height: 1.5; /* Multiplicador puro para herança segura */
 }
 
 .nutrition-table {
@@ -77,38 +76,32 @@ header p {
 
 ---
 
-### Continued development
+### Próximos passos
 
-In future projects, I want to continue improving:
+Nos próximos projetos, pretendo continuar aprimorando:
 
-- Advanced Layouts with Flexbox, pushing alignment tricks further
-- Responsive layouts
-- CSS organization
-- Semantic HTML
-
----
-
-### Useful resources
-
-- Frontend Mentor
+- Layouts avançados com Flexbox e alinhamentos complexos.
+- Práticas avançadas de responsividade.
+- Organização e arquitetura CSS.
+- Uso cada vez mais rigoroso do HTML Semântico.
 
 ---
 
-### AI Collaboration
+### Colaboração com IA (Gemini)
 
-I used Gemini during this project to:
+Utilizei o Gemini durante o desenvolvimento deste projeto como um mentor para:
 
-- Clarify CSS concepts (like `line-height` calculations)
-- Brainstorm layout strategies for horizontal dividers (`<hr>` vs borders)
-- Fix structural box-model bugs (such as margin collapse/footer bleed)
-- Review my commit history strategy
-- Learn best practices for mobile-first development
+- Compreender a fundo cálculos de `line-height` no CSS.
+- Discutir estratégias de layout (ex: decidir entre usar a tag `<hr>` ou bordas para linhas divisórias horizontais).
+- Resolver pequenos bugs de modelo de caixa (box-model), como colapso de margens.
+- Revisar minhas boas práticas de commits no Git.
+- Validar conceitos de fluxo de desenvolvimento Mobile-first.
 
-The AI helped me understand concepts instead of only giving ready-made solutions, acting like an experienced peer reviewer validating my logical structure.
+O uso da IA me ajudou a entender os conceitos por trás das soluções em vez de apenas colar códigos prontos, funcionando como um parceiro de code review.
 
 ---
 
-## Author
+## Autor
 
-- Frontend Mentor - https://www.frontendmentor.io/profile/mnyellison
-- GitHub - https://github.com/mnyellison
+- Frontend Mentor - [@mnyellison](https://www.frontendmentor.io/profile/mnyellison)
+- GitHub - [@mnyellison](https://github.com/mnyellison)
